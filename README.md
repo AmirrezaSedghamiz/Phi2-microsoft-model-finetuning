@@ -1,4 +1,4 @@
-🧠 QLoRA Fine-tuning of Phi-2 for Persian Language Understanding
+# 🧠 QLoRA Fine-tuning of Phi-2 for Persian Language Understanding
 
 https://img.shields.io/badge/Python-3.9+-blue.svg
 https://img.shields.io/badge/PyTorch-2.0+-red.svg
@@ -25,29 +25,7 @@ This project implements efficient fine-tuning of Phi-2 (2.7B parameters) using Q
 
 ✅ Production Ready: Robust error handling and emergency saves
 
-🏗️ Project Structure
-text
-QLoRa-FineTuning/
-├── 📁 Data/                          # Dataset directory (not in Git - large files)
-│   ├── General Data/                # Persian news, blogs, Q&A datasets
-│   └── Advising Data/               # Specialized Persian datasets
-│
-├── 📁 src/                          # Source code
-│   ├── main.py                     # 🚀 Main training script (optimized)
-│   ├── main_optimized.py           # Original optimized version
-│   ├── test_model.py               # 🧪 Interactive model testing
-│   ├── testing.py                  # 📊 Comprehensive evaluation suite
-│   └── exam.py                     # 🔍 Graph algorithm implementation
-│
-├── 📁 outputs/                      # Training outputs (not in Git)
-│   ├── checkpoints/                # Model checkpoints
-│   ├── logs/                       # Training logs
-│   └── evaluation_results/         # Evaluation outputs
-│
-├── 📄 requirements.txt             # Python dependencies
-├── 📄 training.log                 # Training progress log
-├── 📄 README.md                    # This file
-└── 📄 .gitignore                   # Git ignore rules
+
 🚀 Quick Start
 1. Installation
 bash
