@@ -1,0 +1,64 @@
+2025-09-28 20:44:33,525 - INFO - [__main__] - 🚀 === Starting Fixed QLoRA Fine-tuning with GRADIENT COMPUTATION ===
+2025-09-28 20:44:33,525 - INFO - [__main__] - 📁 Output directory: G:/phi2-finetuned-large
+2025-09-28 20:44:33,525 - INFO - [__main__] - 🤖 Local model path: G:/model/microsoft--phi-2/models--microsoft--phi-2/snapshots/ef382358ec9e382308935a992d908de099b64c23
+2025-09-28 20:44:33,525 - INFO - [__main__] - Starting model_loading...
+2025-09-28 20:44:33,637 - INFO - [__main__] - Before model_loading Resources - CPU: 6.1%, RAM: 12.2/23.7 GB (51.4%), GPU: 0.0% (0.0/0.0 GB)
+2025-09-28 20:44:33,638 - INFO - [__main__] - 🔧 Loading model from local path: G:/model/microsoft--phi-2/models--microsoft--phi-2/snapshots/ef382358ec9e382308935a992d908de099b64c23
+2025-09-28 20:44:33,717 - INFO - [__main__] - Set pad_token to eos_token
+2025-09-28 20:44:34,319 - INFO - [accelerate.utils.modeling] - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-09-28 20:44:51,812 - INFO - [__main__] - Trainable parameters: 0
+2025-09-28 20:44:51,812 - WARNING - [__main__] - ❌ No trainable parameters found! Model won't learn.
+2025-09-28 20:44:51,812 - INFO - [__main__] - ✅ Model and tokenizer loaded and prepared successfully
+2025-09-28 20:44:51,924 - INFO - [__main__] - After model_loading Resources - CPU: 7.7%, RAM: 12.3/23.7 GB (52.0%), GPU: 0.0% (0.0/0.0 GB)
+2025-09-28 20:44:51,924 - INFO - [__main__] - ✅ Completed model_loading in 18.29s
+2025-09-28 20:44:51,924 - INFO - [__main__] - Starting LoRA_setup...
+2025-09-28 20:44:52,033 - INFO - [__main__] - Before LoRA_setup Resources - CPU: 8.8%, RAM: 12.3/23.7 GB (52.0%), GPU: 0.0% (0.0/0.0 GB)
+2025-09-28 20:44:52,034 - INFO - [__main__] - 🎛️ Applying LoRA configuration...
+2025-09-28 20:44:52,220 - INFO - [__main__] - ✅ Final trainable parameters: 11,796,480
+2025-09-28 20:44:52,336 - INFO - [__main__] - After LoRA_setup Resources - CPU: 3.6%, RAM: 12.3/23.7 GB (52.0%), GPU: 0.0% (0.0/0.0 GB)
+2025-09-28 20:44:52,336 - INFO - [__main__] - ✅ Completed LoRA_setup in 0.30s
+2025-09-28 20:44:52,336 - INFO - [__main__] - Starting streaming_dataset_setup...
+2025-09-28 20:44:52,441 - INFO - [__main__] - Before streaming_dataset_setup Resources - CPU: 9.1%, RAM: 12.3/23.7 GB (52.0%), GPU: 0.0% (0.0/0.0 GB)
+2025-09-28 20:44:52,441 - INFO - [__main__] - 📂 Creating streaming dataset from G:/persian_news_processed.jsonl
+2025-09-28 20:44:52,442 - INFO - [__main__] - 🎯 Streaming dataset created successfully
+2025-09-28 20:44:52,556 - INFO - [__main__] - After streaming_dataset_setup Resources - CPU: 6.2%, RAM: 12.3/23.7 GB (52.0%), GPU: 0.0% (0.0/0.0 GB)
+2025-09-28 20:44:52,556 - INFO - [__main__] - ✅ Completed streaming_dataset_setup in 0.11s
+2025-09-28 20:44:58,651 - INFO - [__main__] - Counting samples: 100000...
+2025-09-28 20:45:04,564 - INFO - [__main__] - Counting samples: 200000...
+2025-09-28 20:45:04,564 - INFO - [__main__] - Reached max_samples (200000), stopping count
+2025-09-28 20:45:04,571 - INFO - [__main__] - 🎯 === TRAINING SUMMARY ===
+2025-09-28 20:45:04,571 - INFO - [__main__] - 📊 Dataset: G:/persian_news_processed.jsonl
+2025-09-28 20:45:04,571 - INFO - [__main__] - 📈 Estimated samples: 200000
+2025-09-28 20:45:04,571 - INFO - [__main__] - 🔢 Sequence length: 512
+2025-09-28 20:45:04,571 - INFO - [__main__] - ⚡ Batch size: 1 × 32 = 32 (effective)
+2025-09-28 20:45:04,571 - INFO - [__main__] - 📚 Epochs: 1
+2025-09-28 20:45:04,571 - INFO - [__main__] - 🎓 Learning rate: 0.00015
+2025-09-28 20:45:04,571 - INFO - [__main__] - 🎛️  LoRA rank (r): 8, alpha: 16
+2025-09-28 20:45:04,571 - INFO - [__main__] - 🔀 Shuffle buffer: 10,000 samples
+2025-09-28 20:45:04,571 - INFO - [__main__] - 🧠 Trainable parameters: 11,796,480 (0.77% of 1,533,189,120)
+2025-09-28 20:45:04,572 - INFO - [__main__] - 💡 Using FIXED QLORA with proper gradient computation
+2025-09-28 20:45:04,572 - INFO - [__main__] - ==================================================
+2025-09-28 20:45:04,572 - INFO - [__main__] - Starting training_setup...
+2025-09-28 20:45:04,684 - INFO - [__main__] - Before training_setup Resources - CPU: 8.6%, RAM: 12.3/23.7 GB (51.9%), GPU: 0.0% (0.0/0.0 GB)
+2025-09-28 20:45:04,684 - INFO - [__main__] - 📈 Calculated max_steps: 6,250
+2025-09-28 20:45:04,796 - INFO - [__main__] - After training_setup Resources - CPU: 7.7%, RAM: 12.3/23.7 GB (51.9%), GPU: 0.0% (0.0/0.0 GB)
+2025-09-28 20:45:04,797 - INFO - [__main__] - ✅ Completed training_setup in 0.12s
+2025-09-28 20:45:04,797 - INFO - [__main__] - Starting training...
+2025-09-28 20:45:04,908 - INFO - [__main__] - Before training Resources - CPU: 11.4%, RAM: 12.3/23.7 GB (51.9%), GPU: 0.0% (0.0/0.0 GB)
+2025-09-28 20:45:04,909 - INFO - [__main__] - 🎬 Starting training with proper gradient computation...
+2025-09-28 20:45:05,019 - INFO - [__main__] - Pre-training Resources - CPU: 7.9%, RAM: 12.3/23.7 GB (51.9%), GPU: 0.0% (0.0/0.0 GB)
+2025-10-02 14:29:18,747 - INFO - [__main__] - Processed 200000 samples in epoch 0
+2025-10-02 14:29:20,334 - INFO - [__main__] - ✅ Training completed in 3 days, 17:44:15.424134
+2025-10-02 14:29:20,335 - INFO - [__main__] - 📊 Final training loss: 1.1465217211914063
+2025-10-02 14:29:20,441 - INFO - [__main__] - After training Resources - CPU: 7.0%, RAM: 16.1/23.7 GB (67.9%), GPU: 0.0% (0.0/0.0 GB)
+2025-10-02 14:29:20,441 - INFO - [__main__] - ✅ Completed training in 323055.54s
+2025-10-02 14:29:20,441 - INFO - [__main__] - Starting model_saving...
+2025-10-02 14:29:20,549 - INFO - [__main__] - Before model_saving Resources - CPU: 6.6%, RAM: 16.1/23.7 GB (67.9%), GPU: 0.0% (0.0/0.0 GB)
+2025-10-02 14:29:20,550 - INFO - [__main__] - 💾 Saving final model...
+2025-10-02 14:29:20,764 - INFO - [__main__] - 🎉 === Training Complete ===
+2025-10-02 14:29:20,764 - INFO - [__main__] - 💾 Model saved to: G:/phi2-finetuned-large
+2025-10-02 14:29:20,765 - INFO - [__main__] - ⏱️ Training duration: 3 days, 17:44:15.424134
+2025-10-02 14:29:20,875 - INFO - [__main__] - After model_saving Resources - CPU: 5.2%, RAM: 16.2/23.7 GB (68.2%), GPU: 0.0% (0.0/0.0 GB)
+2025-10-02 14:29:20,876 - INFO - [__main__] - ✅ Completed model_saving in 0.32s
+2025-10-02 14:29:20,876 - INFO - [__main__] - 🧹 Cleaning up resources...
+2025-10-02 14:29:21,222 - INFO - [__main__] - After cleanup Resources - CPU: 12.7%, RAM: 16.3/23.7 GB (68.6%), GPU: 0.0% (0.0/0.0 GB)
