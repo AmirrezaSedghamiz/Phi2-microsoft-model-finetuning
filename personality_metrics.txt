@@ -1,0 +1,8 @@
+شاخص‌های شخصیت مدل فارسی
+==================================================
+
+persian_only: 100.0%
+friendly_tone: 25.0%
+helpful_content: 100.0%
+creative_elements: 28.6%
+emoji_usage: 7.1%
