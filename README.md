@@ -9,3 +9,17 @@ The goal of this project was to:
 
 ⚠️ **This project is research/experimental in nature.**
 The results are mixed and the model is **not intended for production use**.
+
+## Key Learnings
+
+### What Worked
+- Streaming large Persian datasets without exhausting memory
+- Applying QLoRA to reduce trainable parameters
+- Building a resumable training pipeline with checkpoints
+- Handling Persian RTL text during evaluation
+
+### What Didn’t Work Well
+- Model quality gains were limited despite large datasets
+- Enforcing strict Persian-only responses proved fragile
+- Training stability required careful tuning and still varied
+- Results did not meet production-quality expectations
